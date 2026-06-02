@@ -126,19 +126,10 @@ p {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: transparent;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-  color: var(--white);
-}
-
-.site-header.scrolled {
   background: var(--white);
   color: var(--ink);
   border-bottom: 1px solid var(--grey-300);
-}
-
-.site-header.dark-mode {
-  color: var(--ink); /* Used for pages without a dark hero */
+  transition: all var(--transition-fast);
 }
 
 .nav-container {
