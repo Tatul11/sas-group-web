@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAS Group — Home wireframe</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wf-canvas">
+  <div class="sheet">
+    <div id="wf-header"></div>
+
+    <!-- VARIATION TOGGLE -->
+    <div style="display:flex;align-items:center;gap:14px;padding:18px 34px 0;flex-wrap:wrap">
+      <span class="seclabel"><span class="num">5.1</span> Home · /</span>
+      <span class="muted">Position SAS Group as Armenia's leading retail &amp; lifestyle company; route to Brands &amp; Careers.</span>
+      <div class="spacer" style="flex:1"></div>
+      <span class="note blue" style="margin-right:4px">Layout option:</span>
+      <div class="vartoggle" data-group="home">
+        <button class="on" data-v="a">A — Full-bleed video</button>
+        <button data-v="b">B — Split hero + rail</button>
+      </div>
+    </div>
+
+    <!-- ============ VARIANT A ============ -->
+    <div data-variant="a" data-group="home" class="show">
+      <!-- HERO -->
+      <div class="section">
+        <div class="section-head"><span class="tag">2 · Hero</span><span class="note">background video — muted autoplay loop · poster fallback · reduced-motion still · pause control</span></div>
+        <div class="hero">
+          <div class="wimg video" style="min-height:330px;flex-direction:column;gap:16px;padding:30px">
+            <span>Background video (16:9)</span>
+            <div class="center" style="position:relative;z-index:3;background:rgba(255,255,255,.86);border:2.5px solid var(--wire);border-radius:12px;padding:22px 26px;max-width:560px">
+              <div class="eyebrow">H1 · pick one headline</div>
+              <div class="hbar lg" style="margin:8px auto;width:80%"></div>
+              <div class="muted">«Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն» / "More than Retail. A Way of Living."</div>
+              <div class="lines short mt12" style="max-width:440px;margin-inline:auto"><i></i><i></i></div>
+              <div class="row" style="justify-content:center;margin-top:16px">
+                <span class="btn red">Բացահայտել բիզնեսները → /brands/</span>
+                <span class="btn out">Աշխատանք մեզ մոտ → /careers/</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAT BAND -->
+      <div class="section">
+        <div class="section-head"><span class="tag">3 · Stat band</span><span class="note">verified figures — substantiate "leading / 30+ years"</span></div>
+        <div class="statband">
+          <div class="stat"><b>30<span class="q">+</span></b><span>տարի</span></div>
+          <div class="stat"><b>N</b><span>սուպերմարկետ</span></div>
+          <div class="stat"><b>10</b><span>բրենդ</span></div>
+          <div class="stat"><b>N</b><span>աշխատակից</span></div>
+          <div class="stat"><b>N</b><span>շուկա / market</span></div>
+        </div>
+      </div>
+
+      <!-- BRAND PORTFOLIO GRID -->
+      <div class="section">
+        <div class="section-head"><span class="tag">4 · Brand portfolio</span><span class="note">all 10 brand cards → brand pages · external brands link out ↗</span></div>
+        <div class="grid g5">
+          <div class="brandcard"><div class="logo">SAS Market</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">SAS.AM</div><div class="ext">↗ sas.am</div></div>
+          <div class="brandcard"><div class="logo">Food Court</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">SAS Sweet</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">SAS Home</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">SAS Import</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">SAS Product</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">BALDI</div><div class="hbar sm"></div></div>
+          <div class="brandcard"><div class="logo">NEXT</div><div class="ext">↗ franchise</div></div>
+          <div class="brandcard"><div class="logo">ALDO</div><div class="ext">↗ franchise</div></div>
+        </div>
+      </div>
+
+      <!-- ABOUT TEASER + CAREERS (two-up) -->
+      <div class="section">
+        <div class="row wrap">
+          <div class="col" style="min-width:280px">
+            <div class="section-head"><span class="tag">5 · About teaser</span></div>
+            <div class="wbox">
+              <div class="eyebrow">Ովքե՞ր ենք մենք</div>
+              <div class="hbar mt8"></div>
+              <div class="lines mt12"><i></i><i></i><i></i><i></i></div>
+              <div class="mt12"><span class="btn out sm">Իմանալ ավելին → /about/</span></div>
+            </div>
+          </div>
+          <div class="col" style="min-width:280px">
+            <div class="section-head"><span class="tag">6 · Careers band</span></div>
+            <div class="wbox fill" style="border-color:var(--cobalt)">
+              <div class="eyebrow">Ինչու՞ աշխատել SAS Group-ում</div>
+              <div class="hbar mt8 cobalt"></div>
+              <div class="lines short mt12"><i></i><i></i></div>
+              <div class="mt12"><span class="btn red sm">Թափուր աշխատատեղեր → /careers/</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEWS -->
+      <div class="section">
+        <div class="section-head"><span class="tag">7 · News</span><span class="note">latest 3 · named author + date (freshness signal)</span></div>
+        <div class="grid g3">
+          <div class="wbox" style="padding:0;overflow:hidden">
+            <div class="wimg" style="border:none;border-radius:0;min-height:120px"><span>news 16:10</span></div>
+            <div style="padding:14px"><div class="muted">30.10.2024 · PR dept.</div><div class="hbar mt8"></div><div class="lines short mt8"><i></i><i></i></div></div>
+          </div>
+          <div class="wbox" style="padding:0;overflow:hidden">
+            <div class="wimg" style="border:none;border-radius:0;min-height:120px"><span>news 16:10</span></div>
+            <div style="padding:14px"><div class="muted">22.10.2024 · PR dept.</div><div class="hbar mt8"></div><div class="lines short mt8"><i></i><i></i></div></div>
+          </div>
+          <div class="wbox" style="padding:0;overflow:hidden">
+            <div class="wimg" style="border:none;border-radius:0;min-height:120px"><span>news 16:10</span></div>
+            <div style="padding:14px"><div class="muted">14.10.2024 · PR dept.</div><div class="hbar mt8"></div><div class="lines short mt8"><i></i><i></i></div></div>
+          </div>
+        </div>
+        <div class="center mt16"><span class="btn ghost sm">Բոլոր նորությունները → /media/news/</span></div>
+      </div>
+
+      <!-- PARTNERS -->
+      <div class="section">
+        <div class="section-head"><span class="tag">8 · Partners strip</span><span class="note">real partner / supplier logo wall → /about/partners/</span></div>
+        <div class="grid g5">
+          <div class="wbox soft fill center" style="padding:14px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:14px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:14px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:14px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:14px"><span class="muted">logo</span></div>
+        </div>
+      </div>
+
+      <!-- CTA BAND -->
+      <div class="section">
+        <div class="section-head"><span class="tag">9 · CTA band</span></div>
+        <div class="wbox" style="background:var(--cobalt);border-color:var(--cobalt-dark);color:#fff;text-align:center;padding:28px">
+          <div style="font-family:var(--font-hand);font-size:24px">Միացե՛ք SAS Group-ի պատմությանը</div>
+          <div class="row" style="justify-content:center;margin-top:14px">
+            <span class="btn red">Բացահայտել բրենդները</span>
+            <span class="btn ghost">Կապ մեզ հետ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ VARIANT B ============ -->
+    <div data-variant="b" data-group="home">
+      <!-- HERO split -->
+      <div class="section">
+        <div class="section-head"><span class="tag">2 · Hero (split)</span><span class="note">text left · video right — calmer, editorial / institutional feel</span></div>
+        <div class="row wrap">
+          <div class="col" style="min-width:300px;display:flex;flex-direction:column;justify-content:center;gap:12px">
+            <div class="eyebrow">SAS Group · 30+ տարի</div>
+            <div class="hbar lg"></div><div class="hbar" style="width:65%"></div>
+            <div class="lines mt8"><i></i><i></i><i></i></div>
+            <div class="row mt12">
+              <span class="btn red">Բացահայտել բիզնեսները → /brands/</span>
+              <span class="btn out">Աշխատանք մեզ մոտ → /careers/</span>
+            </div>
+          </div>
+          <div class="col" style="min-width:300px">
+            <div class="wimg video" style="min-height:280px"><span>Background video (muted loop)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- inline stat strip -->
+      <div class="section">
+        <div class="section-head"><span class="tag">3 · Stat strip (inline, on white)</span></div>
+        <div class="row wrap" style="justify-content:space-between;text-align:center">
+          <div class="col"><div style="font-size:28px;font-weight:900;color:var(--cobalt)">30+</div><div class="muted">տարի</div></div>
+          <div class="col"><div style="font-size:28px;font-weight:900;color:var(--cobalt)">N</div><div class="muted">սուպերմարկետ</div></div>
+          <div class="col"><div style="font-size:28px;font-weight:900;color:var(--cobalt)">10</div><div class="muted">բրենդ</div></div>
+          <div class="col"><div style="font-size:28px;font-weight:900;color:var(--cobalt)">N</div><div class="muted">աշխատակից</div></div>
+          <div class="col"><div style="font-size:28px;font-weight:900;color:var(--cobalt)">N</div><div class="muted">շուկա</div></div>
+        </div>
+      </div>
+
+      <!-- horizontal brand rail -->
+      <div class="section">
+        <div class="section-head"><span class="tag">4 · Brand rail (horizontal scroll)</span><span class="note">grouped: Retail &amp; Food / Home &amp; Lifestyle · swipe →</span></div>
+        <div class="muted" style="font-weight:700;color:var(--ink);margin-bottom:8px">Retail &amp; Food</div>
+        <div style="display:flex;gap:14px;overflow-x:auto;padding-bottom:8px">
+          <div class="brandcard" style="min-width:180px"><div class="logo">SAS Market</div><div class="hbar sm"></div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">SAS.AM ↗</div><div class="ext">sas.am</div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">Food Court</div><div class="hbar sm"></div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">SAS Sweet</div><div class="hbar sm"></div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">Import · Product</div><div class="hbar sm"></div></div>
+        </div>
+        <div class="muted" style="font-weight:700;color:var(--ink);margin:14px 0 8px">Home &amp; Lifestyle</div>
+        <div style="display:flex;gap:14px;overflow-x:auto;padding-bottom:8px">
+          <div class="brandcard" style="min-width:180px"><div class="logo">SAS Home</div><div class="hbar sm"></div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">BALDI</div><div class="hbar sm"></div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">NEXT ↗</div><div class="ext">franchise</div></div>
+          <div class="brandcard" style="min-width:180px"><div class="logo">ALDO ↗</div><div class="ext">franchise</div></div>
+        </div>
+      </div>
+
+      <!-- about full-bleed split -->
+      <div class="section">
+        <div class="section-head"><span class="tag">5 · About teaser (image left)</span></div>
+        <div class="row wrap">
+          <div class="col" style="min-width:260px"><div class="wimg" style="min-height:200px"><span>group photo</span></div></div>
+          <div class="col" style="min-width:260px;display:flex;flex-direction:column;justify-content:center">
+            <div class="eyebrow">Ովքե՞ր ենք մենք</div>
+            <div class="hbar mt8"></div>
+            <div class="lines mt12"><i></i><i></i><i></i><i></i></div>
+            <div class="mt12"><span class="btn out sm">Իմանալ ավելին → /about/</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- careers band full width -->
+      <div class="section">
+        <div class="section-head"><span class="tag">6 · Careers band (full-width image bg)</span></div>
+        <div class="wimg" style="min-height:160px;flex-direction:column;gap:10px">
+          <span>team photo bg</span>
+          <div style="position:relative;z-index:3;background:rgba(255,255,255,.88);border:2.5px solid var(--wire);border-radius:10px;padding:16px 22px;text-align:center">
+            <div style="font-family:var(--font-hand);font-size:20px;color:var(--cobalt)">Ինչու՞ աշխատել SAS Group-ում</div>
+            <div class="mt8"><span class="btn red sm">Թափուր աշխատատեղեր → /careers/</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- news + partners -->
+      <div class="section">
+        <div class="section-head"><span class="tag">7 · News</span><span class="tag">8 · Partners</span></div>
+        <div class="grid g3">
+          <div class="wbox" style="padding:0;overflow:hidden"><div class="wimg" style="border:none;border-radius:0;min-height:110px"><span>news</span></div><div style="padding:12px"><div class="muted">date · author</div><div class="hbar mt8"></div></div></div>
+          <div class="wbox" style="padding:0;overflow:hidden"><div class="wimg" style="border:none;border-radius:0;min-height:110px"><span>news</span></div><div style="padding:12px"><div class="muted">date · author</div><div class="hbar mt8"></div></div></div>
+          <div class="wbox" style="padding:0;overflow:hidden"><div class="wimg" style="border:none;border-radius:0;min-height:110px"><span>news</span></div><div style="padding:12px"><div class="muted">date · author</div><div class="hbar mt8"></div></div></div>
+        </div>
+        <div class="grid g5 mt16">
+          <div class="wbox soft fill center" style="padding:12px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:12px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:12px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:12px"><span class="muted">logo</span></div>
+          <div class="wbox soft fill center" style="padding:12px"><span class="muted">logo</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wf-footer"></div>
+  </div>
+</div>
+<script src="chrome.js"></script>
+</body>
+</html>

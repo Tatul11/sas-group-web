@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAS Group</title>
+  <meta name="description" content="Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն:">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Inditex-style Home Page */
+    .hero-fullscreen {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--spacing-xl) var(--spacing-md);
+      color: var(--white);
+    }
+    
+    .hero-video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: var(--ink);
+    }
+
+    .hero-video-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2); /* Subtle dark overlay for text readability */
+      pointer-events: none;
+    }
+
+    .hero-video-wrapper iframe {
+      width: 100vw;
+      height: 56.25vw; /* 16:9 Aspect Ratio */
+      min-height: 100vh;
+      min-width: 177.77vh; /* 16:9 Aspect Ratio */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      z-index: 10;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Minimalist Stat Band */
+    .stat-band {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      border-bottom: 1px solid var(--grey-300);
+    }
+
+    .stat-item {
+      padding: var(--spacing-xl) var(--spacing-md);
+      text-align: center;
+      border-right: 1px solid var(--grey-300);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-item h3 {
+      font-size: 4rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    .stat-item p {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey-600);
+      font-weight: 500;
+    }
+
+    /* Large imagery blocks */
+    .brand-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+    }
+
+    .brand-showcase-img {
+      background: var(--grey-100);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--grey-300);
+      font-size: 2rem;
+    }
+
+    .brand-showcase-content {
+      padding: var(--spacing-xxl) var(--spacing-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--white);
+    }
+
+    .brand-list {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .brand-list li {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--grey-300);
+      padding-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-list li a {
+      color: var(--ink);
+    }
+
+    .brand-list li a:hover {
+      opacity: 0.5;
+    }
+
+    /* News Strip Minimal */
+    .news-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 0 var(--spacing-md);
+    }
+
+    .news-item {
+      display: block;
+      group: hover;
+    }
+
+    .news-item-img {
+      height: 400px;
+      background: var(--grey-100);
+      margin-bottom: 1.5rem;
+      transition: opacity var(--transition-fast);
+    }
+
+    .news-item:hover .news-item-img {
+      opacity: 0.8;
+    }
+
+    .news-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey-600);
+      margin-bottom: 0.5rem;
+    }
+
+    .news-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .cta-minimal {
+      padding: var(--spacing-xxl) var(--spacing-md);
+      text-align: center;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    @media (max-width: 992px) {
+      .brand-showcase {
+        grid-template-columns: 1fr;
+      }
+      .brand-showcase-img {
+        height: 50vh;
+      }
+      .brand-showcase-content {
+        padding: var(--spacing-xl) var(--spacing-md);
+      }
+      .stat-band {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-item {
+        border-bottom: 1px solid var(--grey-300);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">SAS GROUP</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Գլխավոր</a>
+        <a href="about.html" class="nav-link">Մեր մասին</a>
+        <a href="brands.html" class="nav-link">Բրենդներ</a>
+        <a href="careers.html" class="nav-link">Աշխատանք</a>
+        <a href="media.html" class="nav-link">Մեդիա</a>
+        <a href="contact.html" class="nav-link">Կապ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with YouTube Background -->
+    <section class="hero-fullscreen">
+      <div class="hero-video-wrapper">
+        <iframe src="https://www.youtube.com/embed/kv7c38KNfe0?autoplay=1&mute=1&loop=1&playlist=kv7c38KNfe0&controls=0" title="SAS Supermarket&#39;s new application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="hero-content fade-in-up">
+        <h1>SAS GROUP</h1>
+        <p>Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն: Ավելի քան 30 տարի մենք ձևավորում ենք առօրյան:</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="brands.html" class="btn btn-white">Բացահայտել Բիզնեսները</a>
+          <a href="careers.html" class="btn btn-outline-white">Աշխատանք մեզ մոտ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimalist Stat Band -->
+    <section class="stat-band fade-in-up">
+      <div class="stat-item">
+        <h3>30+</h3>
+        <p>տարի</p>
+      </div>
+      <div class="stat-item">
+        <h3>N</h3>
+        <p>սուպերմարկետ</p>
+      </div>
+      <div class="stat-item">
+        <h3>10</h3>
+        <p>բրենդ</p>
+      </div>
+      <div class="stat-item">
+        <h3>N</h3>
+        <p>աշխատակից</p>
+      </div>
+    </section>
+
+    <!-- Edge-to-Edge Brand Showcase -->
+    <section class="brand-showcase edge-to-edge">
+      <div class="brand-showcase-img">
+        <span>Image Placeholder</span>
+      </div>
+      <div class="brand-showcase-content fade-in-up">
+        <span class="subtitle">Բրենդներ</span>
+        <h2>Մեր Պորտֆոլիոն</h2>
+        <div class="divider-short"></div>
+        <p>Բացահայտեք մեր բիզնես ուղղությունները և առաջատար ապրանքանիշերը:</p>
+        
+        <ul class="brand-list">
+          <li><a href="brands.html">ՍԱՍ Սուպերմարկետներ</a> <span>&rarr;</span></li>
+          <li><a href="https://sas.am" target="_blank">SAS.AM Marketplace</a> <span>&rarr;</span></li>
+          <li><a href="brands.html">ՍԱՍ Ֆուդ Քորթ</a> <span>&rarr;</span></li>
+          <li><a href="brands.html">Միջազգային Բրենդներ (Baldi, Next, Aldo)</a> <span>&rarr;</span></li>
+        </ul>
+
+        <a href="brands.html" class="btn btn-primary" style="margin-top: 2rem;">Բոլոր Բրենդները</a>
+      </div>
+    </section>
+
+    <section class="brand-showcase edge-to-edge" style="direction: rtl;">
+      <div class="brand-showcase-img">
+        <span>Image Placeholder</span>
+      </div>
+      <div class="brand-showcase-content fade-in-up" style="direction: ltr;">
+        <span class="subtitle">Կարիերա</span>
+        <h2>Ինչու՞ աշխատել SAS Group-ում</h2>
+        <div class="divider-short"></div>
+        <p>Միացեք պրոֆեսիոնալների մեր թիմին և կառուցեք ձեր կարիերան առաջատար ընկերությունում։</p>
+        
+        <a href="careers.html" class="btn btn-secondary" style="margin-top: 3rem;">Թափուր Աշխատատեղեր</a>
+      </div>
+    </section>
+
+    <!-- Editorial News Strip -->
+    <section class="section container">
+      <div class="fade-in-up" style="text-align: center; margin-bottom: 4rem;">
+        <span class="subtitle">Մեդիա</span>
+        <h2>Նորություններ</h2>
+      </div>
+      
+      <div class="news-strip">
+        <a href="media.html" class="news-item fade-in-up">
+          <div class="news-item-img"></div>
+          <div class="news-meta">30.10.2024 &middot; PR Dept</div>
+          <div class="news-title">Նոր բրենդի մուտք հայկական շուկա</div>
+        </a>
+        <a href="media.html" class="news-item fade-in-up" style="transition-delay: 0.1s;">
+          <div class="news-item-img"></div>
+          <div class="news-meta">22.10.2024 &middot; PR Dept</div>
+          <div class="news-title">SAS Սուպերմարկետի նոր մասնաճյուղ</div>
+        </a>
+        <a href="media.html" class="news-item fade-in-up" style="transition-delay: 0.2s;">
+          <div class="news-item-img"></div>
+          <div class="news-meta">14.10.2024 &middot; PR Dept</div>
+          <div class="news-title">Բարեգործական նախաձեռնություն</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Minimal CTA -->
+    <section class="cta-minimal edge-to-edge fade-in-up">
+      <div class="container">
+        <h2>Միացե՛ք SAS Group-ի պատմությանը</h2>
+        <div class="divider-short divider-center" style="background-color: var(--white);"></div>
+        <div style="margin-top: 3rem;">
+          <a href="contact.html" class="btn btn-white">Կապ մեզ հետ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="flex: 2; min-width: 300px;">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">SAS GROUP</a>
+          <p class="text-muted" style="max-width: 400px;">Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն: Ավելի քան 30 տարի մենք ձևավորում ենք առօրյան:</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Ընկերություն</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="about.html#history">Պատմություն</a></li>
+            <li><a href="about.html#mission">Առաքելություն և արժեքներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Բիզնեսներ</h4>
+          <ul class="footer-links">
+            <li><a href="brands.html">ՍԱՍ Սուպերմարկետներ</a></li>
+            <li><a href="https://sas.am">SAS.AM Marketplace</a></li>
+            <li><a href="brands.html">Միջազգային Բրենդներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Տեղեկատվություն</h4>
+          <ul class="footer-links">
+            <li><a href="careers.html">Աշխատանք</a></li>
+            <li><a href="media.html">Մեդիա</a></li>
+            <li><a href="contact.html">Կապ</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAS GROUP. Բոլոր իրավունքները պաշտպանված են:</div>
+        <div class="social-links" style="margin-top: 0;">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

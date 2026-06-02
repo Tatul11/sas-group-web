@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAS Group — Corporate Website Wireframes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Roboto:wght@400;500;700;900&family=Noto+Sans+Armenian:wght@400;500;700&display=swap');
+:root{
+  --cobalt:#015CAB;--cobalt-dark:#014A8A;--red:#EB262E;--ink:#1A1A1A;
+  --grey-600:#5A5A5A;--paper:#EFEBE3;
+  --font-hand:"Caveat",cursive;--font-ui:"Roboto","Noto Sans Armenian",system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;height:100%;}
+body{font-family:var(--font-ui);background:var(--ink);color:#fff;display:flex;overflow:hidden;}
+
+/* sidebar */
+.side{
+  width:268px;flex:none;height:100vh;overflow-y:auto;
+  background:#15171a;border-right:1px solid #2a2d32;padding:18px 0 40px;
+}
+.brand{padding:4px 20px 16px;display:flex;align-items:baseline;gap:3px;border-bottom:1px solid #2a2d32;margin-bottom:6px;}
+.brand .lg{font-weight:900;font-size:22px;letter-spacing:.02em;}
+.brand .lg b{color:var(--red);}
+.brand .lg span{color:#7fb3e6;}
+.brand small{display:block;font-family:var(--font-hand);font-size:15px;color:#8a8f97;margin-top:2px;}
+.sub{padding:14px 20px 6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6f77;}
+.navitem{
+  display:block;padding:9px 20px;color:#cfd3d9;text-decoration:none;font-size:13.5px;font-weight:500;
+  border-left:3px solid transparent;cursor:pointer;
+}
+.navitem:hover{background:#1d2024;color:#fff;}
+.navitem.on{background:#1d2024;color:#fff;border-left-color:var(--red);font-weight:700;}
+.navitem .hy{display:block;}
+.navitem .en{font-size:11px;color:#7d828a;font-weight:400;}
+.navchild{display:block;padding:6px 20px 6px 34px;color:#9aa0a8;text-decoration:none;font-size:12px;cursor:pointer;}
+.navchild:hover{color:#fff;}
+.navchild::before{content:"– ";color:#565b62;}
+
+/* viewport */
+.stage{flex:1;height:100vh;display:flex;flex-direction:column;background:var(--paper);}
+.topbar{
+  height:52px;flex:none;background:#fff;border-bottom:2px solid var(--ink);
+  display:flex;align-items:center;gap:16px;padding:0 18px;
+}
+.topbar .title{font-weight:900;font-size:14px;}
+.topbar .title span{font-family:var(--font-hand);color:var(--cobalt);font-weight:700;font-size:18px;}
+.topbar .route{font-size:12px;color:var(--grey-600);font-family:var(--font-ui);background:#F1F2F4;padding:3px 9px;border-radius:5px;}
+.topbar .spacer{flex:1;}
+.topbar .hint{font-family:var(--font-hand);font-size:16px;color:var(--red);}
+.topbar a.dl{font-size:12px;font-weight:700;color:var(--cobalt);text-decoration:none;border:2px solid var(--cobalt);padding:5px 11px;border-radius:6px;}
+iframe{flex:1;width:100%;border:none;background:var(--paper);}
+.side::-webkit-scrollbar{width:8px;}
+.side::-webkit-scrollbar-thumb{background:#33373d;border-radius:8px;}
+</style>
+</head>
+<body>
+  <aside class="side">
+    <div class="brand">
+      <div>
+        <div class="lg"><b>SAS</b><span> GROUP</span></div>
+        <small>corporate site · low-fi wireframes</small>
+      </div>
+    </div>
+
+    <a class="navitem on" data-src="wireframes/home.html" data-route="/">
+      <span class="hy">Գլխավոր</span><span class="en">Home  ·  hero + portfolio + careers + news</span>
+    </a>
+
+    <div class="sub">ՄԵՐ ՄԱՍԻՆ · About</div>
+    <a class="navitem" data-src="wireframes/about.html" data-route="/about/">
+      <span class="hy">Մեր մասին</span><span class="en">About cluster</span>
+    </a>
+    <a class="navchild" data-src="wireframes/about.html#overview">Overview /about/</a>
+    <a class="navchild" data-src="wireframes/about.html#history">History timeline /about/history/</a>
+    <a class="navchild" data-src="wireframes/about.html#mission">Mission &amp; values /about/mission-values/</a>
+    <a class="navchild" data-src="wireframes/about.html#partners">Partners /about/partners/</a>
+
+    <div class="sub">ԲՐԵՆԴՆԵՐ · Brands</div>
+    <a class="navitem" data-src="wireframes/brands.html" data-route="/brands/">
+      <span class="hy">Բրենդներ</span><span class="en">Hub + brand template</span>
+    </a>
+    <a class="navchild" data-src="wireframes/brands.html#hub">Brands hub /brands/</a>
+    <a class="navchild" data-src="wireframes/brands.html#detail">Brand page template /brands/&lt;slug&gt;/</a>
+
+    <div class="sub">ԱՇԽԱՏԱՆՔ · Careers</div>
+    <a class="navitem" data-src="wireframes/careers.html" data-route="/careers/">
+      <span class="hy">Աշխատանք</span><span class="en">Hub + jobs + apply</span>
+    </a>
+    <a class="navchild" data-src="wireframes/careers.html#hub">Careers hub /careers/</a>
+    <a class="navchild" data-src="wireframes/careers.html#jobs">Open positions + detail</a>
+    <a class="navchild" data-src="wireframes/careers.html#apply">Apply / CV upload</a>
+
+    <div class="sub">ՄԵԴԻԱ · Media</div>
+    <a class="navitem" data-src="wireframes/media.html" data-route="/media/">
+      <span class="hy">Մեդիա</span><span class="en">News + article + gallery</span>
+    </a>
+    <a class="navchild" data-src="wireframes/media.html#news">News list /media/news/</a>
+    <a class="navchild" data-src="wireframes/media.html#article">Article /media/news/&lt;slug&gt;/</a>
+    <a class="navchild" data-src="wireframes/media.html#gallery">Photo archive /media/gallery/</a>
+
+    <div class="sub">ՀԵՏԱԴԱՐՁ ԿԱՊ · Contact</div>
+    <a class="navitem" data-src="wireframes/contact.html" data-route="/contact/">
+      <span class="hy">Հետադարձ կապ</span><span class="en">Contact + utility pages</span>
+    </a>
+    <a class="navchild" data-src="wireframes/contact.html#contact">Contact /contact/</a>
+    <a class="navchild" data-src="wireframes/contact.html#utility">Privacy · Terms · 404</a>
+  </aside>
+
+  <main class="stage">
+    <div class="topbar">
+      <div class="title">SAS Group <span>Wireframes</span></div>
+      <div class="route" id="route">/</div>
+      <div class="spacer"></div>
+      <div class="hint">✎ low-fi · structure &amp; flow only · Home + Brands have A/B variants</div>
+    </div>
+    <iframe id="view" src="wireframes/home.html" title="wireframe preview"></iframe>
+  </main>
+
+<script>
+  const view=document.getElementById('view');
+  const route=document.getElementById('route');
+  function activate(el){
+    document.querySelectorAll('.navitem').forEach(n=>n.classList.remove('on'));
+    if(el.classList.contains('navitem')) el.classList.add('on');
+    else { // child: light up its parent navitem
+      let p=el.previousElementSibling;
+      while(p && !p.classList.contains('navitem')) p=p.previousElementSibling;
+      if(p) p.classList.add('on');
+    }
+  }
+  document.querySelectorAll('[data-src]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      view.src=el.getAttribute('data-src');
+      if(el.dataset.route) route.textContent=el.dataset.route;
+      activate(el);
+    });
+  });
+</script>
+</body>
+</html>

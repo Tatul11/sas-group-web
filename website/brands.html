@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Բրենդներ - SAS Group</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      padding: calc(var(--spacing-xl) + 120px) var(--spacing-md) var(--spacing-xl);
+      text-align: center;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    /* Minimalist Filters */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: var(--spacing-xl);
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: none;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      color: var(--grey-600);
+      position: relative;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      color: var(--ink);
+    }
+
+    .filter-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--ink);
+      transform: scaleX(0);
+      transition: transform var(--transition-fast);
+    }
+
+    .filter-btn.active::after {
+      transform: scaleX(1);
+    }
+
+    /* Editorial Grid */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1px; /* Used for hairline borders if grid has background */
+      background: var(--grey-300);
+      border: 1px solid var(--grey-300);
+    }
+
+    .brand-card {
+      background: var(--white);
+      padding: var(--spacing-lg) var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+      transition: background-color var(--transition-fast);
+    }
+
+    .brand-card:hover {
+      background: var(--grey-100);
+    }
+
+    .brand-logo-text {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-bottom: 2rem;
+      color: var(--ink);
+      text-transform: uppercase;
+    }
+
+    .brand-card p {
+      color: var(--grey-600);
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .brand-link {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header dark-mode">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">SAS GROUP</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Գլխավոր</a>
+        <a href="about.html" class="nav-link">Մեր մասին</a>
+        <a href="brands.html" class="nav-link active">Բրենդներ</a>
+        <a href="careers.html" class="nav-link">Աշխատանք</a>
+        <a href="media.html" class="nav-link">Մեդիա</a>
+        <a href="contact.html" class="nav-link">Կապ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header fade-in-up">
+      <div class="container">
+        <h1>Բրենդներ</h1>
+        <div class="divider-short divider-center"></div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container fade-in-up">
+        
+        <div class="filters">
+          <button class="filter-btn active">Բոլորը</button>
+          <button class="filter-btn">Ռիթեյլ և Սնունդ</button>
+          <button class="filter-btn">Նորաձևություն և Լայֆսթայլ</button>
+        </div>
+        
+        <div class="brands-grid">
+          <div class="brand-card">
+            <div class="brand-logo-text">SAS<br>Supermarkets</div>
+            <p>Հայաստանի ամենամեծ և պրեմիում սուպերմարկետների ցանցը, որն առաջարկում է բացառիկ ապրանքատեսականի:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+          
+          <div class="brand-card">
+            <div class="brand-logo-text">SAS.AM</div>
+            <p>Հայաստանի առաջատար առցանց գնումների հարթակը՝ արագ և հուսալի առաքմամբ:</p>
+            <a href="https://sas.am" target="_blank" class="brand-link">Անցնել կայք &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">Food<br>Court</div>
+            <p>Բարձրակարգ արագ սնունդ և բազմազան խոհանոց մեկ վայրում:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">SAS<br>Sweet</div>
+            <p>Բարձրորակ հրուշակեղենի և քաղցրավենիքի մասնագիտացված ցանց:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">SAS<br>Home</div>
+            <p>Տան պարագաների և դեկորի նրբաճաշակ տեսականի ձեր ինտերիերի համար:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">BALDI</div>
+            <p>Նորաձև կոշիկներ և աքսեսուարներ միջազգային առաջատար արտադրողներից:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">NEXT</div>
+            <p>Բրիտանական հանրահայտ հագուստի և լայֆսթայլ բրենդի պաշտոնական ներկայացուցչությունը (Franchise):</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+
+          <div class="brand-card">
+            <div class="brand-logo-text">ALDO</div>
+            <p>Կանադական կոշիկի և աքսեսուարների հայտնի ապրանքանիշ (Franchise):</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+          
+          <div class="brand-card">
+            <div class="brand-logo-text">SAS<br>Product</div>
+            <p>Սեփական արտադրության թարմ և որակյալ սննդամթերքի լայն տեսականի:</p>
+            <a href="#" class="brand-link">Դիտել &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="flex: 2; min-width: 300px;">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">SAS GROUP</a>
+          <p class="text-muted" style="max-width: 400px;">Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն: Ավելի քան 30 տարի մենք ձևավորում ենք առօրյան:</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Ընկերություն</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="about.html#history">Պատմություն</a></li>
+            <li><a href="about.html#mission">Առաքելություն և արժեքներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Բիզնեսներ</h4>
+          <ul class="footer-links">
+            <li><a href="brands.html">ՍԱՍ Սուպերմարկետներ</a></li>
+            <li><a href="https://sas.am">SAS.AM Marketplace</a></li>
+            <li><a href="brands.html">Միջազգային Բրենդներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Տեղեկատվություն</h4>
+          <ul class="footer-links">
+            <li><a href="careers.html">Աշխատանք</a></li>
+            <li><a href="media.html">Մեդիա</a></li>
+            <li><a href="contact.html">Կապ</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAS GROUP. Բոլոր իրավունքները պաշտպանված են:</div>
+        <div class="social-links" style="margin-top: 0;">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      if(header && header.classList.contains('dark-mode')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAS Group — Careers wireframes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wf-canvas">
+  <div class="sheet">
+    <div id="wf-header"></div>
+
+    <!-- ===== CAREERS HUB ===== -->
+    <div class="page-divider" id="hub">
+      <span class="route">/careers/</span>
+      <h2>5.8 · Careers hub — Աշխատանք SAS Group-ում</h2>
+    </div>
+    <div class="section">
+      <div class="section-head"><span class="tag">1 · Hero</span></div>
+      <div class="wimg" style="min-height:160px;flex-direction:column;gap:10px">
+        <span>team / workplace photo</span>
+        <div style="position:relative;z-index:3;background:rgba(255,255,255,.9);border:2.5px solid var(--wire);border-radius:8px;padding:14px 22px;font-family:var(--font-hand);font-size:22px;color:var(--cobalt)">Աշխատանք SAS Group-ում</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-head"><span class="tag">2 · Ինչու՞ աշխատել SAS Group-ում</span><span class="note">benefits / perks grid</span></div>
+      <div class="grid g3">
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">Աճ / Growth</div><div class="lines short mt8"><i></i><i></i></div></div>
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">Կայունություն / Stability</div><div class="lines short mt8"><i></i><i></i></div></div>
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">Ուսուցում / Training</div><div class="lines short mt8"><i></i><i></i></div></div>
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">Զեղչեր / Discounts</div><div class="lines short mt8"><i></i><i></i></div></div>
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">Թիմ / Culture</div><div class="lines short mt8"><i></i><i></i></div></div>
+        <div class="wbox"><div class="hbar cobalt sm"></div><div class="eyebrow mt8">…more perks</div><div class="lines short mt8"><i></i><i></i></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-head"><span class="tag">3 · Culture + photos</span></div>
+      <div class="grid g4">
+        <div class="wimg"><span>photo</span></div><div class="wimg"><span>photo</span></div>
+        <div class="wimg"><span>photo</span></div><div class="wimg"><span>photo</span></div>
+      </div>
+    </div>
+
+    <!-- ===== OPEN POSITIONS ===== -->
+    <div class="page-divider" id="jobs">
+      <span class="route">/careers/jobs/</span>
+      <h2>5.9 · Open positions + job detail</h2>
+    </div>
+    <div class="section">
+      <div class="section-head"><span class="tag">4 · Listing</span><span class="note">real, dated listings = active, legitimate employer (JobPosting schema)</span></div>
+      <div class="row wrap" style="margin-bottom:14px">
+        <span class="chip on">Brand: All</span>
+        <span class="chip">City</span>
+        <span class="chip">Department</span>
+        <span class="chip">Type</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="wbox row wrap" style="align-items:center;gap:14px">
+          <div class="col" style="min-width:200px"><div class="hbar" style="width:60%"></div><div class="muted mt8">Brand · City · 30.10.2024</div></div>
+          <span class="chip">Full-time</span>
+          <span class="btn out sm">View &amp; apply →</span>
+        </div>
+        <div class="wbox row wrap" style="align-items:center;gap:14px">
+          <div class="col" style="min-width:200px"><div class="hbar" style="width:50%"></div><div class="muted mt8">Brand · City · 24.10.2024</div></div>
+          <span class="chip">Part-time</span>
+          <span class="btn out sm">View &amp; apply →</span>
+        </div>
+        <div class="wbox row wrap" style="align-items:center;gap:14px">
+          <div class="col" style="min-width:200px"><div class="hbar" style="width:55%"></div><div class="muted mt8">Brand · City · 18.10.2024</div></div>
+          <span class="chip">Full-time</span>
+          <span class="btn out sm">View &amp; apply →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><span class="tag">Job detail</span><span class="route" style="background:var(--ink);color:#fff">/careers/jobs/&lt;slug&gt;/</span></div>
+      <div class="row wrap">
+        <div class="col" style="min-width:300px">
+          <div class="hbar lg"></div>
+          <div class="muted mt8">Brand · Location · Department · posted 30.10.2024</div>
+          <div class="eyebrow mt16">Role summary</div>
+          <div class="lines mt8"><i></i><i></i><i></i></div>
+          <div class="eyebrow mt16">Responsibilities</div>
+          <div class="lines mt8"><i></i><i></i><i></i><i></i></div>
+          <div class="eyebrow mt16">Requirements</div>
+          <div class="lines mt8"><i></i><i></i><i></i></div>
+          <div class="eyebrow mt16">Benefits</div>
+          <div class="lines short mt8"><i></i><i></i></div>
+        </div>
+        <div class="col" style="min-width:260px;max-width:340px">
+          <div class="wbox" style="border-color:var(--cobalt)">
+            <div class="eyebrow">Apply form</div>
+            <div class="field mt8"><label>Անուն / Name</label><div class="input"></div></div>
+            <div class="field"><label>Կապ / Contact</label><div class="input"></div></div>
+            <div class="field"><label>CV upload</label><div class="upload">⬆ Drag PDF / DOCX or browse</div></div>
+            <div class="field"><label>Message</label><div class="input area"></div></div>
+            <div class="consent"><span class="box"></span><span>I consent to processing of my data (required)</span></div>
+            <div class="mt12"><span class="btn red sm">Submit application</span></div>
+            <div class="note mt8">do NOT auto-submit · consent required · flag file-upload step</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== GENERAL APPLY ===== -->
+    <div class="page-divider" id="apply">
+      <span class="route">/careers/apply/</span>
+      <h2>5.10 · General application / CV upload</h2>
+    </div>
+    <div class="section">
+      <div class="row wrap">
+        <div class="col" style="min-width:300px">
+          <div class="section-head"><span class="tag">Intro</span></div>
+          <div class="lines"><i></i><i></i><i></i></div>
+          <div class="wbox fill mt16">
+            <div class="field"><label>Անուն ազգանուն / Full name</label><div class="input"></div></div>
+            <div class="row"><div class="col field"><label>Email</label><div class="input"></div></div><div class="col field"><label>Phone</label><div class="input"></div></div></div>
+            <div class="field"><label>Position of interest</label><div class="input">▾ select brand / department</div></div>
+            <div class="field"><label>CV upload (PDF / DOCX)</label><div class="upload">⬆ Drag file or browse</div></div>
+            <div class="consent"><span class="box"></span><span>Consent to data processing (required)</span></div>
+            <div class="mt12"><span class="btn red sm">Send application</span></div>
+          </div>
+        </div>
+        <div class="col" style="min-width:240px;max-width:320px">
+          <div class="section-head"><span class="tag">Confirmation state</span></div>
+          <div class="wbox" style="border-color:var(--cobalt);text-align:center;padding:22px">
+            <div style="font-size:34px;color:var(--cobalt)">✓</div>
+            <div class="eyebrow">Thank you — we received your CV</div>
+            <div class="lines short mt8"><i></i><i></i></div>
+          </div>
+          <div class="section-head mt24"><span class="tag">HR contact</span></div>
+          <div class="wbox fill"><div class="muted">hr@sasgroup.am · +374 ·· ·· ·· ··</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wf-footer"></div>
+  </div>
+</div>
+<script src="chrome.js"></script>
+</body>
+</html>

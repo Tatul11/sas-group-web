@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Մեր Մասին - SAS Group</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Dark mode header override for pages without full-bleed dark hero */
+    .page-header {
+      padding: calc(var(--spacing-xl) + 120px) var(--spacing-md) var(--spacing-xl);
+      text-align: center;
+      background: var(--grey-100);
+      color: var(--ink);
+    }
+
+    .page-header h1 {
+      margin-bottom: 2rem;
+    }
+
+    .intro-text {
+      font-size: 1.5rem;
+      font-weight: 300;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* Minimalist Timeline */
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 2rem;
+      padding-bottom: var(--spacing-xl);
+      border-bottom: 1px solid var(--grey-300);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-year {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .timeline-content h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+
+    .value-card {
+      border-top: 2px solid var(--ink);
+      padding-top: 1.5rem;
+    }
+
+    .value-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-card p {
+      font-size: 1rem;
+      color: var(--grey-600);
+    }
+
+    /* Minimalist Partners */
+    .partners-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .partner-logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--grey-300);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color var(--transition-fast);
+    }
+
+    .partner-logo:hover {
+      color: var(--ink);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <!-- Note: We add 'dark-mode' class so the nav links are black on the light background -->
+  <header class="site-header dark-mode">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">SAS GROUP</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Գլխավոր</a>
+        <a href="about.html" class="nav-link active">Մեր մասին</a>
+        <a href="brands.html" class="nav-link">Բրենդներ</a>
+        <a href="careers.html" class="nav-link">Աշխատանք</a>
+        <a href="media.html" class="nav-link">Մեդիա</a>
+        <a href="contact.html" class="nav-link">Կապ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header fade-in-up">
+      <div class="container">
+        <h1>Մեր Մասին</h1>
+        <p class="intro-text">SAS Group-ը հիմնադրվել է ավելի քան 30 տարի առաջ և դարձել է որակի, հուսալիության և նորարարության հոմանիշ Հայաստանում:</p>
+      </div>
+    </div>
+
+    <!-- History Timeline -->
+    <section class="section container" id="history">
+      <div class="fade-in-up" style="margin-bottom: 4rem; text-align: center;">
+        <span class="subtitle">Պատմություն</span>
+        <h2>Մեր Ուղին</h2>
+        <div class="divider-short divider-center"></div>
+      </div>
+      
+      <div class="timeline fade-in-up">
+        <div class="timeline-item">
+          <div class="timeline-year">1990</div>
+          <div class="timeline-content">
+            <h4>Հիմնադրում</h4>
+            <p class="text-muted">SAS Group-ի հիմնադրումը որպես փոքր բիզնես և առաջին քայլերը մանրածախ առևտրի ոլորտում։</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2000</div>
+          <div class="timeline-content">
+            <h4>Ընդլայնում</h4>
+            <p class="text-muted">SAS սուպերմարկետների ցանցի ստեղծումը և ընդլայնումը Երևանում։ Նոր ստանդարտների ներդրում սպասարկման մեջ։</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <h4>Դիվերսիֆիկացիա</h4>
+            <p class="text-muted">Նոր բրենդների՝ SAS Sweet, Food Court, հագուստի և կոշիկի միջազգային բրենդների (Baldi, Next, Aldo) ներկայացում։</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <h4>Թվայնացում</h4>
+            <p class="text-muted">SAS.AM առցանց հարթակի զարգացում, բիզնես պրոցեսների թվայնացում և շուկայի առաջատարի դիրքերի ամրապնդում։</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section edge-to-edge" id="mission" style="background: var(--ink); color: var(--white); padding: var(--spacing-xxl) var(--spacing-md);">
+      <div class="container fade-in-up">
+        <div style="max-width: 800px;">
+          <span class="subtitle">Առաքելություն</span>
+          <h2 style="color: var(--white);">Շարունակաբար բարելավել մեր հաճախորդների կյանքի որակը։</h2>
+          <div class="divider-short" style="background: var(--white);"></div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card" style="border-color: rgba(255,255,255,0.2);">
+            <h3>Որակ</h3>
+            <p style="color: rgba(255,255,255,0.7);">Անզիջում մոտեցում ապրանքների և սպասարկման որակին։ Մենք ընտրում ենք միայն լավագույնը մեր հաճախորդների համար։</p>
+          </div>
+          <div class="value-card" style="border-color: rgba(255,255,255,0.2);">
+            <h3>Նորարարություն</h3>
+            <p style="color: rgba(255,255,255,0.7);">Շարունակական զարգացում, նոր տեխնոլոգիաների և լուծումների ներդրում բիզնեսի բոլոր ճյուղերում։</p>
+          </div>
+          <div class="value-card" style="border-color: rgba(255,255,255,0.2);">
+            <h3>Հոգատարություն</h3>
+            <p style="color: rgba(255,255,255,0.7);">Հաճախորդակենտրոն մոտեցում, հոգատարություն աշխատակիցների և շրջակա միջավայրի նկատմամբ։</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section container" id="partners" style="padding-bottom: var(--spacing-xxl);">
+      <div class="fade-in-up" style="text-align: center;">
+        <span class="subtitle">Գործընկերներ</span>
+        <h2>Միջազգային Համագործակցություն</h2>
+        <div class="divider-short divider-center"></div>
+        <p class="text-muted" style="max-width: 700px; margin: 0 auto;">SAS Group-ը համագործակցում է աշխարհի առաջատար բրենդների և ընկերությունների հետ։</p>
+        
+        <div class="partners-strip">
+          <span class="partner-logo">Logo One</span>
+          <span class="partner-logo">Brand Two</span>
+          <span class="partner-logo">Studio Three</span>
+          <span class="partner-logo">Global Four</span>
+          <span class="partner-logo">Partner Five</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="flex: 2; min-width: 300px;">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">SAS GROUP</a>
+          <p class="text-muted" style="max-width: 400px;">Հայաստանի առաջատար ռիթեյլ և լայֆսթայլ ընկերություն: Ավելի քան 30 տարի մենք ձևավորում ենք առօրյան:</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Ընկերություն</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="about.html#history">Պատմություն</a></li>
+            <li><a href="about.html#mission">Առաքելություն և արժեքներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Բիզնեսներ</h4>
+          <ul class="footer-links">
+            <li><a href="brands.html">ՍԱՍ Սուպերմարկետներ</a></li>
+            <li><a href="https://sas.am">SAS.AM Marketplace</a></li>
+            <li><a href="brands.html">Միջազգային Բրենդներ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Տեղեկատվություն</h4>
+          <ul class="footer-links">
+            <li><a href="careers.html">Աշխատանք</a></li>
+            <li><a href="media.html">Մեդիա</a></li>
+            <li><a href="contact.html">Կապ</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAS GROUP. Բոլոր իրավունքները պաշտպանված են:</div>
+        <div class="social-links" style="margin-top: 0;">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Adjust header on pages without a hero video
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      if(header && header.classList.contains('dark-mode')) {
+        // Initial state is already dark mode.
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

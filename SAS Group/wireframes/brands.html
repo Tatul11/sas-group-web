@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAS Group — Brands wireframe</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wf-canvas">
+  <div class="sheet">
+    <div id="wf-header"></div>
+
+    <!-- =================== BRANDS HUB =================== -->
+    <div class="page-divider" id="hub">
+      <span class="route">/brands/</span>
+      <h2>5.6 · Brands hub — Մեր բրենդները</h2>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:14px;padding:18px 34px 0;flex-wrap:wrap">
+      <span class="muted">All 10 brands, grouped Retail &amp; Food vs Home &amp; Lifestyle. Each card → its brand page.</span>
+      <div class="spacer" style="flex:1"></div>
+      <span class="note blue">Layout:</span>
+      <div class="vartoggle" data-group="hub">
+        <button class="on" data-v="a">A — Grouped grid</button>
+        <button data-v="b">B — Editorial list</button>
+      </div>
+    </div>
+
+    <!-- HUB VARIANT A -->
+    <div data-variant="a" data-group="hub" class="show">
+      <div class="section">
+        <div class="section-head"><span class="tag">Hero</span></div>
+        <div class="wimg" style="min-height:160px"><span>Our brands hero — "Մեր բրենդները"</span></div>
+        <div class="lines short mt12" style="max-width:560px"><i></i><i></i></div>
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="tag">Retail &amp; Food</span></div>
+        <div class="grid g3">
+          <div class="brandcard"><div class="logo">SAS Supermarket</div><div class="lines short"><i></i><i></i></div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">SAS.AM Marketplace</div><div class="ext">↗ links out to sas.am</div><span class="btn red sm">Visit sas.am ↗</span></div>
+          <div class="brandcard"><div class="logo">SAS Food Court</div><div class="lines short"><i></i><i></i></div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">SAS Sweet</div><div class="lines short"><i></i><i></i></div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">SAS Import</div><div class="lines short"><i></i><i></i></div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">SAS Product</div><div class="lines short"><i></i><i></i></div><span class="btn out sm">Learn more →</span></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head"><span class="tag">Home &amp; Lifestyle</span></div>
+        <div class="grid g4">
+          <div class="brandcard"><div class="logo">SAS Home</div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">BALDI</div><span class="btn out sm">Learn more →</span></div>
+          <div class="brandcard"><div class="logo">NEXT</div><div class="ext">↗ franchise</div><span class="btn red sm">Store info ↗</span></div>
+          <div class="brandcard"><div class="logo">ALDO</div><div class="ext">↗ franchise</div><span class="btn red sm">Store info ↗</span></div>
+        </div>
+        <div class="center mt24"><span class="btn cobalt">CTA band → Careers / Contact</span></div>
+      </div>
+    </div>
+
+    <!-- HUB VARIANT B -->
+    <div data-variant="b" data-group="hub">
+      <div class="section">
+        <div class="section-head"><span class="tag">Editorial list — one row per brand</span><span class="note">image + descriptor + facts, alternating sides</span></div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="row wrap" style="align-items:center">
+            <div class="col" style="min-width:220px"><div class="wimg" style="min-height:120px"><span>brand img</span></div></div>
+            <div class="col" style="min-width:240px"><div class="hbar"></div><div class="lines short mt8"><i></i><i></i></div><div class="mt8"><span class="btn out sm">SAS Supermarket →</span></div></div>
+          </div>
+          <div class="row wrap" style="align-items:center;flex-direction:row-reverse">
+            <div class="col" style="min-width:220px"><div class="wimg" style="min-height:120px"><span>brand img</span></div></div>
+            <div class="col" style="min-width:240px"><div class="hbar"></div><div class="lines short mt8"><i></i><i></i></div><div class="mt8"><span class="btn red sm">SAS.AM Marketplace ↗</span></div></div>
+          </div>
+          <div class="row wrap" style="align-items:center">
+            <div class="col" style="min-width:220px"><div class="wimg" style="min-height:120px"><span>brand img</span></div></div>
+            <div class="col" style="min-width:240px"><div class="hbar"></div><div class="lines short mt8"><i></i><i></i></div><div class="mt8"><span class="btn out sm">BALDI · NEXT ↗ · ALDO ↗ …</span></div></div>
+          </div>
+        </div>
+        <div class="note arrow mt16">…repeats for all 10 brands · groups shown as section headers between rows</div>
+      </div>
+    </div>
+
+    <!-- =================== BRAND PAGE TEMPLATE =================== -->
+    <div class="page-divider" id="detail">
+      <span class="route">/brands/&lt;slug&gt;/</span>
+      <h2>5.7 · Brand page template — used for all 10 brands</h2>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><span class="tag">1 · Brand hero</span><span class="note">brand logo + signature image / video</span></div>
+      <div class="wimg video" style="min-height:240px;flex-direction:column;gap:10px">
+        <span>Brand signature image / video</span>
+        <div style="position:relative;z-index:3;background:rgba(255,255,255,.9);border:2.5px solid var(--wire);border-radius:8px;padding:12px 20px;font-family:var(--font-hand);font-size:22px;color:var(--cobalt)">[ Brand logo ]</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row wrap">
+        <div class="col" style="min-width:300px">
+          <div class="section-head"><span class="tag">2 · What it is</span></div>
+          <div class="eyebrow">2–3 paragraph descriptor</div>
+          <div class="lines mt12"><i></i><i></i><i></i><i></i></div>
+          <div class="lines mt12"><i></i><i></i><i></i></div>
+        </div>
+        <div class="col" style="min-width:240px;max-width:320px">
+          <div class="section-head"><span class="tag">3 · Key facts</span></div>
+          <div class="wbox fill">
+            <div class="row" style="justify-content:space-between"><span class="muted">Locations</span><b>N</b></div>
+            <div class="row mt8" style="justify-content:space-between"><span class="muted">Since</span><b>YYYY</b></div>
+            <div class="row mt8" style="justify-content:space-between"><span class="muted">Offering</span><b>…</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><span class="tag">4 · Gallery</span></div>
+      <div class="grid g4">
+        <div class="wimg"><span>img</span></div><div class="wimg"><span>img</span></div>
+        <div class="wimg"><span>img</span></div><div class="wimg"><span>img</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><span class="tag">5 · Visit / shop CTA</span><span class="note">→ external brand site where one exists (sas.am · NEXT · ALDO)</span></div>
+      <div class="wbox" style="background:var(--red);border-color:var(--red-dark);color:#fff;text-align:center;padding:24px">
+        <div style="font-family:var(--font-hand);font-size:22px">Այցելել / գնումներ կատարել</div>
+        <div class="mt8"><span class="btn ghost">Visit live brand site ↗</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><span class="tag">6 · Related brands</span></div>
+      <div class="grid g4">
+        <div class="brandcard"><div class="logo">related</div></div>
+        <div class="brandcard"><div class="logo">related</div></div>
+        <div class="brandcard"><div class="logo">related</div></div>
+        <div class="brandcard center" style="justify-content:center;align-items:center"><span class="btn out sm">← Back to /brands/</span></div>
+      </div>
+    </div>
+
+    <div id="wf-footer"></div>
+  </div>
+</div>
+<script src="chrome.js"></script>
+</body>
+</html>
